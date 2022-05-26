@@ -7,7 +7,7 @@ resource "aws_subnet" "subnet" {
   map_public_ip_on_launch = var.map_public_ip_on_launch
 
   tags = {
-    Name         = "${var.name}.${var.zones[count.index]}"
+    Name         = "${var.name}.${var.zones[count.index]}.private"
     Environment  = var.env
     Provisioner  = "Terraform"
   }
